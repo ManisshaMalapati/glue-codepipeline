@@ -6,7 +6,7 @@ Resources:
       Role: arn:aws:iam::992382566139:role/my-glue-role
       Command:
         Name: glueetl
-        ScriptLocation: s3://my-etl-spark/script/glue_script.py
+        ScriptLocation: s3://my-etl-spark/script/etl_test.py
       DefaultArguments:
         "--TempDir": "s3://my-etl-spark/temp/"
       GlueVersion: "2.0"
