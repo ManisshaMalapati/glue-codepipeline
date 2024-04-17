@@ -1,0 +1,14 @@
+Resources:
+  GlueJob:
+    Type: AWS::Glue::Job
+    Properties:
+      Name: MyGlueJob  
+      Role: arn:aws:iam::992382566139:role/my-glue-role
+      Command:
+        Name: glueetl
+        ScriptLocation: s3://my-etl-spark/script/glue_script.py
+      DefaultArguments:
+        "--TempDir": "s3://my-etl-spark/temp/"
+      GlueVersion: "2.0"
+      WorkerType: G.1X
+      NumberOfWorkers: 3
